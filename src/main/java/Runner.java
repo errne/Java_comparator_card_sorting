@@ -1,0 +1,22 @@
+public class Runner {
+    public static void main(String[] args) {
+        Hand hand = new Hand();
+        Hand hand2 = new Hand();
+
+        hand.add( new Card(12, Card.HEARTS) );
+        hand.add( new Card(4, Card.CLUBS) );
+        hand.add( new Card(2, Card.DIAMONDS) );
+        hand.add( new Card(14, Card.CLUBS) );
+        hand.add( new Card(7, Card.HEARTS) );
+        hand.add( new Card(2, Card.CLUBS) );
+
+        hand2.add( new Card(2, Card.DIAMONDS) );
+        System.out.println(hand.compareTo(hand2));
+
+        hand.sortAgainstSuit();
+
+        hand.print();
+    }
+}
+
+
